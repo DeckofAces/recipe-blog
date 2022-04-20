@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:wght@400;700&display=swap");
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+  --playfair: "Playfair Display", serif;
+  --orange: #f2994a;
+  --light-grey: #bdbdbd;
+  --dark-grey: #4f4f4f;
+  --very-dark-grey: #333333;
+  --black: #000000;
+}
+
+:root {
+  font-size: 16px;
+  font-family: var(--montserrat);
+}
+
+#wrapper {
+  max-width: 94vw;
+  margin: 2.5vh auto;
+}
+
+header h1 {
+  font: 700 1.5rem var(--playfair);
+}
+header div {
+  display: flex;
+  align-items: baseline;
+  gap: 3%;
+  margin: 0.75rem 0 1.5rem;
+}
+header div p {
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--dark-grey);
+}
+header + img {
+  margin-bottom: 1.5rem;
+}
+
+.servings .material-icons.md-12 {
+  font-size: 1rem;
+}
+.servings .material-icons.md-12.orange600 {
+  color: var(--orange);
+}
+.servings__details {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  margin-bottom: 1.3rem;
+  margin-right: auto;
+min-width: 5rem;}
+.servings__details div h4 {
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: var(--light-grey);
+}
+.servings__details div p {
+  font-weight: 500;
+  font-size: 0.625rem;
+  color: var(--dark-grey);
+}
+.servings__details:first-of-type p {
+  color: var(--orange);
+}
+
+/*# sourceMappingURL=styles.css.map */
