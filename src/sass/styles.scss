@@ -89,19 +89,20 @@ header {
         margin-bottom: 0.75rem;
     }
 
-    // fieldset:first-of-type {
-    //     background-color: red;
-    // }
+    fieldset {
+        margin-bottom: 2rem;
+        legend {
+            font: italic 400 1rem var(--playfair);
+            margin-bottom: 1rem;
+        }
 
-    legend {
-        font: italic 400 1rem var(--playfair);
-        margin-bottom: 1rem;
-    }
+        .inputs {
+            display: flex;
+            gap: 1%;
 
-    label {
-        font: 400 0.875rem var(--montserrat);
-        strong {
-            font-weight: bold;
-        }            
+            label {
+                font: 400 0.875rem var(--montserrat);
+            }
+        }
     }
 }

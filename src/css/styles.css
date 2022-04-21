@@ -104,15 +104,19 @@ header + img {
   color: var(--very-dark-grey);
   margin-bottom: 0.75rem;
 }
-.ingredients legend {
+.ingredients fieldset {
+  margin-bottom: 2rem;
+}
+.ingredients fieldset legend {
   font: italic 400 1rem var(--playfair);
   margin-bottom: 1rem;
 }
-.ingredients label {
-  font: 400 0.875rem var(--montserrat);
+.ingredients fieldset .inputs {
+  display: flex;
+  gap: 1%;
 }
-.ingredients label strong {
-  font-weight: bold;
+.ingredients fieldset .inputs label {
+  font: 400 0.875rem var(--montserrat);
 }
 
 /*# sourceMappingURL=styles.css.map */
