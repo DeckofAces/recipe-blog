@@ -131,6 +131,7 @@ header {
             counter-increment: li;
             position: relative;
             padding-left: 2rem;
+            margin-bottom: 7%;
 
             &::before {
                 content: counter(li);
@@ -148,4 +149,11 @@ header {
             }
         }
     }
+}
+
+section+p {
+    margin: 1.625rem 0;
+    font-style: italic;
+    font-size: 0.75rem;
+    color: var(--light-grey);
 }

@@ -138,6 +138,7 @@ header + img {
   counter-increment: li;
   position: relative;
   padding-left: 2rem;
+  margin-bottom: 7%;
 }
 .instructions ol li::before {
   content: counter(li);
@@ -152,6 +153,13 @@ header + img {
   font-family: var(--playfair);
   font-size: 1.25rem;
   text-align: center;
+}
+
+section + p {
+  margin: 1.625rem 0;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--light-grey);
 }
 
 /*# sourceMappingURL=styles.css.map */
