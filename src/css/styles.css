@@ -119,4 +119,39 @@ header + img {
   font: 400 0.875rem var(--montserrat);
 }
 
+.instructions h1 {
+  font: 700 1.5rem var(--playfair);
+  margin-bottom: 1.5rem;
+}
+.instructions ol {
+  margin: 0 auto;
+  max-width: 94%;
+}
+.instructions li {
+  font: 400 1rem var(--montserrat);
+}
+.instructions ol {
+  counter-reset: li;
+}
+.instructions ol li {
+  list-style: none;
+  counter-increment: li;
+  position: relative;
+  padding-left: 2rem;
+}
+.instructions ol li::before {
+  content: counter(li);
+  position: absolute;
+  left: -1rem;
+  color: #fff;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: var(--orange);
+  border-radius: 25%;
+  font-weight: 700;
+  font-family: var(--playfair);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
