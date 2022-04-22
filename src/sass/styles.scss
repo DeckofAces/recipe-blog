@@ -1,5 +1,11 @@
-@use "./partials/reset";
-@use "./partials/variables";
+@use "reset";
+@use "partials/variables";
+@use "partials/mixins";
+
+@use "header";
+@use "servings";
+@use "ingredients";
+@use "instructions";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:wght@400;700&display=swap");
 
@@ -13,147 +19,14 @@
     margin: 2.5vh auto;
 }
 
-header {
-    h1 {
-        font: 700 1.5rem var(--playfair);
-    }
-
-    div {
-        display: flex;
-        align-items: baseline;
-        gap: 3%;
-        margin: 0.75rem 0 1.5rem;
-
-        p {
-            font-weight: 500;
-            font-size: 0.75rem;
-            font-style: italic;
-            color: var(--dark-grey);
-        }
-    }
-
-    &+img {
-        margin-bottom: 1.5rem;
-    }
-}
-
-.servings {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0.75rem;
-
-    .material-icons.md-12 {
-        font-size: 1rem;
-
-        &.orange600 {
-            color: var(--orange);
-        }
-    }
-
-    &__details {
-        display: flex;
-        align-items: center;
-        min-width: 5rem;
-        gap: 5%;
-        margin-bottom: 1.3rem;
-        margin-right: auto;
-
-        & div {
-            h4 {
-                font-weight: 700;
-                font-size: 0.5rem;
-                color: var(--light-grey);
-            }
-
-            p {
-                font-weight: 500;
-                font-size: 0.625rem;
-                color: var(--dark-grey);
-            }
-        }
-
-        &:first-of-type {
-            margin-right: 90%;
-
-            p {
-                color: var(--orange);
-            }
-        }
-    }
-}
-
-.ingredients {
-    h2 {
-        font: 700 1.125rem var(--playfair);
-        color: var(--very-dark-grey);
-        margin-bottom: 0.75rem;
-    }
-
-    fieldset {
-        margin-bottom: 2rem;
-
-        legend {
-            font: italic 400 1rem var(--playfair);
-            margin-bottom: 1rem;
-        }
-
-        .inputs {
-            display: flex;
-            gap: 1%;
-
-            label {
-                font: 400 0.875rem var(--montserrat);
-            }
-        }
-    }
-}
-
-.instructions {
-    h1 {
-        font: 700 1.5rem var(--playfair);
-        margin-bottom: 1.5rem;
-    }
-
-    ol {
-        margin: 0 auto;
-        max-width: 94%;
-    }
-
-    li {
-        font: 400 1rem var(--montserrat);
-    }
-
-    ol {
-        counter-reset: li;
-
-        li {
-            list-style: none;
-            counter-increment: li;
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 7%;
-
-            &::before {
-                content: counter(li);
-                position: absolute;
-                left: -1rem;
-                color: #fff;
-                width: 2.25rem;
-                height: 2.25rem;
-                background-color: var(--orange);
-                border-radius: 25%;
-                font-weight: 700;
-                font-family: var(--playfair);
-                font-size: 1.25rem;
-                text-align: center;
-            }
-        }
-    }
-}
-
 section+p {
     margin: 1.625rem 0;
     font-style: italic;
     font-size: 0.75rem;
     color: var(--light-grey);
+}
+
+/* Desktop Styling */
+@include mixins.breakpoint-up(large) {
+    
 }

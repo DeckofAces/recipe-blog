@@ -1,0 +1,30 @@
+@use "partials/mixins";
+
+header {
+    h1 {
+        font: 700 1.5rem var(--playfair);
+    }
+
+    div {
+        display: flex;
+        align-items: baseline;
+        gap: 3%;
+        margin: 0.75rem 0 1.5rem;
+
+        p {
+            font-weight: 500;
+            font-size: 0.75rem;
+            font-style: italic;
+            color: var(--dark-grey);
+        }
+    }
+
+    &+img {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Desktop Styling
+@include mixins.breakpoint-up(large) {
+
+}

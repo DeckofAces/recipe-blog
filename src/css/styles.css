@@ -34,16 +34,6 @@ fieldset {
   --black: #000000;
 }
 
-:root {
-  font-size: 16px;
-  font-family: var(--montserrat);
-}
-
-#wrapper {
-  max-width: 94vw;
-  margin: 2.5vh auto;
-}
-
 header h1 {
   font: 700 1.5rem var(--playfair);
 }
@@ -155,11 +145,23 @@ header + img {
   text-align: center;
 }
 
+:root {
+  font-size: 16px;
+  font-family: var(--montserrat);
+}
+
+#wrapper {
+  max-width: 94vw;
+  margin: 2.5vh auto;
+}
+
 section + p {
   margin: 1.625rem 0;
   font-style: italic;
   font-size: 0.75rem;
   color: var(--light-grey);
 }
+
+/* Desktop Styling */
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,44 @@
+.servings {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+
+    .material-icons.md-12 {
+        font-size: 1rem;
+
+        &.orange600 {
+            color: var(--orange);
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        min-width: 5rem;
+        gap: 5%;
+        margin-bottom: 1.3rem;
+        margin-right: auto;
+
+        & div {
+            h4 {
+                font-weight: 700;
+                font-size: 0.5rem;
+                color: var(--light-grey);
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 0.625rem;
+                color: var(--dark-grey);
+            }
+        }
+
+        &:first-of-type {
+            margin-right: 90%;
+
+            p {
+                color: var(--orange);
+            }
+        }
+    }
+}
