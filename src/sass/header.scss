@@ -26,5 +26,14 @@ header {
 
 // Desktop Styling
 @include mixins.breakpoint-up(large) {
-
+    header {
+        max-width: 60%;
+        h1 {
+            font-size: 3rem;
+            width: 130%;
+        }
+        p {
+            font-size: 0.875rem;
+        }
+    }
 }

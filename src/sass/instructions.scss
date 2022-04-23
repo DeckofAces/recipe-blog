@@ -1,3 +1,5 @@
+@use "partials/mixins";
+
 .instructions {
     h1 {
         font: 700 1.5rem var(--playfair);
@@ -38,5 +40,12 @@
                 text-align: center;
             }
         }
+    }
+}
+
+// Desktop Styling
+@include mixins.breakpoint-up(large) {
+    .instructions {
+        max-width: 50vw;
     }
 }
